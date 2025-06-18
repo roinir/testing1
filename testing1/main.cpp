@@ -20,6 +20,19 @@ int main()
         std::cout << "Invalid input. Please enter a number.\n";
         return 1;
     }
-    std::cout << Calc::calculate(n1, op, n2);
+    try
+    {
+        std::cout << Calc::calculate(n1, op, n2);
+    }
+    catch (DivisionByZeroException& k)
+    {
+        std::cout << "Can't divide by zero. Sorry!\n";
+        return 1;
+    }
+    catch (OperatorIsIncorrect& j)
+    {
+        std::cout << "Our calculator doesn't support this operator. Sorry!\n";
+        return 1;
+    }
     return 0;
 }
