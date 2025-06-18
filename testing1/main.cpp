@@ -4,9 +4,13 @@
 
 int main()
 {
-    int num;
-    std::cout << "Give a number and I will check if it is prime: ";
-    std::cin >> num;
+    int tempNum;
+    std::cout << "How many prime numbers do you want me to find? ";
+    std::cin >> tempNum;
+
+    int const numOfPrimes = tempNum;
+    int arr[numOfPrimes];
+
     printIsNumberPrime(num);
     return 0;
 }

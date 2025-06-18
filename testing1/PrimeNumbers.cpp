@@ -27,3 +27,4 @@ void printIsNumberPrime(int num)
         std::cout << "The number is not prime";
     }
 }
+
