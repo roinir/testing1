@@ -1,5 +1,10 @@
 #pragma once
 
+enum class error_codes : int
+{
+	nonPositiveNumber
+};
+
 // checks if an int is a prime number
 bool isPrime(int num);
 
