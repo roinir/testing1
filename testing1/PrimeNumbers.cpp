@@ -1,16 +1,23 @@
 #include <cmath>
 #include <iostream>
 
+#include "PrimeNumbers.h"
+
 bool isPrime(int num)
 {
+    if (num == 1)
+    {
+        return false;
+    }
+    else if (num < 1)
+    {
+        throw error_codes::nonPositiveNumber;
+    }
     for (int i = 2; i <= static_cast<int>(sqrt(num)); i++)
     {
-        for (int j = pow(i, 2); j <= num; j += i)
+        if (num % i == 0)
         {
-            if (num == j)
-            {
-                return false;
-            }
+            return false;
         }
     }
     return true;
@@ -18,13 +25,20 @@ bool isPrime(int num)
 
 void printIsNumberPrime(int num)
 {
-    if (isPrime(num))
+    try
     {
-        std::cout << "The number is prime";
+        if (isPrime(num))
+        {
+            std::cout << "The number " << num << " is prime ";
+        }
+        else
+        {
+            std::cout << "The number " << num << " is not prime ";
+        }
     }
-    else
+    catch (error_codes nonPositiveNumber)
     {
-        std::cout << "The number is not prime";
+        std::cout << "The number has to be positive!";
     }
 }
 
