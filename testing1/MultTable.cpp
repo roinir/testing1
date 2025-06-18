@@ -1,7 +1,7 @@
 #include "MultTable.h"
 
 #include <iostream>
-
+#include <string>
 
 void printMultTable()
 {
@@ -17,16 +17,25 @@ void printMultTable()
 
 void printSingleNumInTable(int num)
 {
-    if (num >= 100)
+    int numOfSpaces = calcNumOfSpaces(num);
+    std::string result;
+    result.append(numOfSpaces, ' '); // contains the string of spaces required
+    std::cout << result << num;
+}
+
+int calcOppositeNumOfSpaces(int num)
+{
+    int count = 0;
+    while (num > 0)
     {
-        std::cout << " " << num;
+        num /= 10;
+        count++;
     }
-    else if (num >= 10)
-    {
-        std::cout << "  " << num; 
-    }
-    else
-    {
-        std::cout << "   " << num;
-    }
+    return count;
+}
+
+int calcNumOfSpaces(int num)
+{
+    int opp = calcOppositeNumOfSpaces(num);
+    return calcOppositeNumOfSpaces(BOARD_SIZE) - opp + OFFSET_SPACE;
 }
