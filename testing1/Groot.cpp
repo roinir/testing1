@@ -1,11 +1,9 @@
 #include "Groot.h"
+
 #include <cmath>
 #include <iomanip>
 #include <iostream>
 #include <sstream>
-#include <typeinfo>
-
-#include <type_traits>
 
 float calcSqrt(float num)
 {
