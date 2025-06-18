@@ -1,12 +1,11 @@
-#include <cmath>
-#include <typeinfo>
 #include "Groot.h"
+#include <cmath>
 #include <iomanip>
 #include <iostream>
 #include <sstream>
+#include <typeinfo>
 
 #include <type_traits>
-
 
 float calcSqrt(float num)
 {
@@ -19,7 +18,7 @@ float calcSqrt(float num)
 
 void takeInputAndCalcSqrt()
 {
-    
+
     std::cout << "Input a number: ";
     float num;
     std::cin >> num;
@@ -38,5 +37,4 @@ void takeInputAndCalcSqrt()
     {
         std::cout << "The number can't be negative!\n";
     }
-
 }

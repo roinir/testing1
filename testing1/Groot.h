@@ -6,7 +6,7 @@ enum class error_code : int
 };
 
 // calc sqrt of a number
-float calcSqrt(float num); 
+float calcSqrt(float num);
 
 // take an input from the user and use the calcSqrt func to calc its sqrt
 void takeInputAndCalcSqrt();
