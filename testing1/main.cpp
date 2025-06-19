@@ -2,6 +2,8 @@
 
 #include "PrimeNumbers.h"
 
+using namespace std;
+
 int main()
 {
     int num;
@@ -13,6 +15,11 @@ int main()
         std::cout << "Invalid input. Please enter a number.\n";
         return 1;
     }
-    printIsNumberPrime(num);
+    int* arr = new int(num);
+    fillArr(arr, num);
+    for (int i = 0; i < num; i++)
+    {
+        std::cout << arr[i] << " ";
+    }
     return 0;
 }

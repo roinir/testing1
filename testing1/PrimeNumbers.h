@@ -10,3 +10,6 @@ bool isPrime(int num);
 
 // prints if the number is prime using the isPrime function
 void printIsNumberPrime(int num);
+
+// filling arr with size prime numbers
+void fillArr(int* arr, int size);

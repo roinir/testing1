@@ -42,3 +42,17 @@ void printIsNumberPrime(int num)
     }
 }
 
+void fillArr(int* arr, int size)
+{
+    int i = 2;
+    int count = 0;
+    while (count < size)
+    {
+        if (isPrime(i))
+        {
+            arr[count] = i;
+            count++;
+        }
+        i++;
+    }
+}
