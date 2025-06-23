@@ -24,12 +24,18 @@
     <ClCompile Include="NewHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MemLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MetaData.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="NewHandler.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemLib.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

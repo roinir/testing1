@@ -1,6 +1,5 @@
 #include <iostream>
 
-using namespace std;
 
 int main()
 {
@@ -9,14 +8,18 @@ int main()
         //MetaData firstPtr = MetaData();
         //MemAlloc* p = new (0) MemAlloc;
         //delete[] ptr;
-        int* num = new int(3);
+        int* num = new int(1);
+        std::cout << "\nThe number is: " << *num << "\n";
         int* num1 = new int(3);
+        std::cout << "\nThe number is: " << *num1 << "\n";
         int* num2 = new int(3);
+        std::cout << "\nThe number is: " << *num2 << "\n";
+
         return 0;
     }
-    catch (bad_alloc& ba)
+    catch (std::bad_alloc& ba)
     {
-        cout << ba.what() << endl;
+        std::cout << ba.what() << std::endl;
         return 1;
     }
 }
