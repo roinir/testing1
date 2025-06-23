@@ -6,18 +6,12 @@
 
 #include "MetaData.h"
 
-void* operator new(std::size_t sz);
-
-void* operator new[](std::size_t sz);
-
-void operator delete(void* ptr) noexcept;
-
-void operator delete(void* ptr, std::size_t size) noexcept;
-
-void operator delete[](void* ptr) noexcept;
-
-void operator delete[](void* ptr, std::size_t size) noexcept;
-
 void printLinkedList();
 
 MetaData FIRST_PTR = MetaData();
+
+const int LARGE_NUM_FOR_DIFFERENCE = 10000;
+
+void addToLinkedList(MetaData* ptr, std::size_t sz);
+
+void deleteFromLinkedList(MetaData* ptr);

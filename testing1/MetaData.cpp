@@ -6,13 +6,16 @@ MetaData::MetaData()
 {
     m_size = 0;
     m_nextMetaData = NULL;
-    std::cout << "first ptr in linked list initialize\n";
 }
 
 MetaData::MetaData(std::size_t size) : m_size(size)
 {
     m_nextMetaData = NULL;
-    std::cout << "\nanother ptr in linked list initialized\n";
+}
+
+MetaData::MetaData(std::size_t size, MetaData* nextMetaData) : m_size(size), m_nextMetaData(nextMetaData)
+{
+    // left blank intentionally
 }
 
 std::size_t MetaData::getSize() const
@@ -27,14 +30,10 @@ MetaData* MetaData::getNextMetaData() const
 
 MetaData* MetaData::getLastMetaData(MetaData* temp)
 {
-    int count = 0;
     while (temp->getNextMetaData())
     {
-        count++;
         temp = temp->getNextMetaData();
     }
-    std::cout << "\nThe count is: " << count << "\n";
-    std::cout << "I am: " << &temp;
     return temp;
 }
 

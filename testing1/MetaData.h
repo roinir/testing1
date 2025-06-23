@@ -7,6 +7,7 @@ class MetaData
   public:
     MetaData();
     MetaData(std::size_t size);
+    MetaData(std::size_t size, MetaData* nextMetaData);
     std::size_t getSize() const;
     MetaData* getNextMetaData() const;
     void setNextMetaData(MetaData* nextPtr);
