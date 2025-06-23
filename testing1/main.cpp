@@ -10,11 +10,12 @@ int main()
         //delete[] ptr;
         int* num = new int(1);
         std::cout << "\nThe number is: " << *num << "\n";
-        delete num;
         int* num1 = new int(3);
         std::cout << "\nThe number is: " << *num1 << "\n";
         int* num2 = new int(3);
         std::cout << "\nThe number is: " << *num2 << "\n";
+        delete num1;
+        std::cout << "\n";
        
 
         return 0;

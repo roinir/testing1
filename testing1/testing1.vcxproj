@@ -144,12 +144,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MemLib.cpp" />
     <ClCompile Include="MetaData.cpp" />
     <ClCompile Include="NewHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MemLib.h" />
     <ClInclude Include="MetaData.h" />
     <ClInclude Include="NewHandler.h" />
   </ItemGroup>
