@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "Tuple.h"
 
 template <typename T1, typename T2> Tuple<T1, T2>::Tuple(T1 key, T2 val) : m_key(key), m_val(val)
@@ -23,11 +25,6 @@ template <typename T1, typename T2> void Tuple<T1, T2>::setKey(T1 key)
 template <typename T1, typename T2> void Tuple<T1, T2>::setVal(T2 val)
 {
     m_val = val;
-}
-
-template <typename T1, typename T2> int Tuple<T1, T2>::hashKey(int rem)
-{
-    return static_cast<int>(this) % rem;
 }
 
 template <typename T1, typename T2> bool Tuple<T1, T2>::operator==(const Tuple<T1, T2>& other) const
