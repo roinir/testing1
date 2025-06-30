@@ -4,6 +4,8 @@
 
 int main()
 {
-    HashTable<int, char*> table = HashTable<int, char*>(5);
+    int length = 3;
+    HashTable table = HashTable(length);
+    table.display();
     return 0;
 }

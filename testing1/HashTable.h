@@ -2,36 +2,39 @@
 
 #include "Tuple.h"
 
-template <typename T1, typename T2> class HashTable
+class HashTable
 {
   public:
     HashTable(int length);
 
-    void addTuple(T1 key, T2 val);
-    T2 searchForVal(T1 key) const;
+    void addTuple(unsigned char key, unsigned char val);
+    unsigned char searchForVal(unsigned char key) const;
     void setLength(int length);
-    int hashKey(T1 key); // using the ptr(this), cast to int and reminder the length of the hash table or using
+    int hashKey(unsigned char key) const; // using the ptr(this), cast to int and reminder the length of the hash table
+                                          // or using
                                  // the /random in linux, can use wsl
 
-    void delKey(T1 key);
+    void delKey(unsigned char key);
     int getLength() const;
-    T1 searchForKey(T2 val);
-    bool isKeyInTable(T1 key);
+    unsigned char searchForKey(unsigned char val);
+    bool isKeyInTable(unsigned char key);
+    Tuple* getTable() const;
+    void display() const;
 
 
-    HashTable<T1, T2> operator+(const HashTable<T1, T2>& other) const;
+    HashTable operator+(const HashTable& other) const;
+    bool operator==(const HashTable& other) const;
+    void operator+=(const HashTable& other);
 
-    /*
 
-    HashTable operator+=(const ComplexNum& other) const;
-    bool operator==(const String& str1) const;
+    HashTable& operator=(const HashTable& other); // copy assignment operator
+    ~HashTable();                                 // destructor
+    HashTable(const HashTable& other);            // copy constructor
 
-    ~String();                              // destructor
-    String(const String& other);            // copy constructor
-    String& operator=(const String& other); // copy assignment operator
-    */
 
   private:
-    Tuple<T1, T2>* m_hashTable;
+    Tuple* m_hashTable;
     int m_length;
+
+ 
 };

@@ -2,51 +2,51 @@
 
 #include "Tuple.h"
 
-template <typename T1, typename T2> Tuple<T1, T2>::Tuple(T1 key, T2 val) : m_key(key), m_val(val)
+Tuple::Tuple(unsigned char key, unsigned char val) : m_key(key), m_val(val)
 {
     // left blank intentionally
 }
 
-template <typename T1, typename T2> T1 Tuple<T1, T2>::getKey() const
+unsigned char Tuple::getKey() const
 {
     return m_key;
 }
 
-template <typename T1, typename T2> T2 Tuple<T1, T2>::getVal() const
+unsigned char Tuple::getVal() const
 {
     return m_val;
 }
 
-template <typename T1, typename T2> void Tuple<T1, T2>::setKey(T1 key)
+void Tuple::setKey(unsigned char key)
 {
     m_key = key;
 }
 
-template <typename T1, typename T2> void Tuple<T1, T2>::setVal(T2 val)
+void Tuple::setVal(unsigned char val)
 {
     m_val = val;
 }
 
-template <typename T1, typename T2> bool Tuple<T1, T2>::operator==(const Tuple<T1, T2>& other) const
+bool Tuple::operator==(const Tuple& other) const
 {
     return ((m_key == other.m_key) && (m_val == other.m_val));
 }
 
-template <typename T1, typename T2> Tuple<T1, T2>::Tuple(const Tuple<T1, T2>& other)
+Tuple::Tuple(const Tuple& other)
 {
     m_key = other.m_key;
     m_val = other.m_val;
 }
 
-template <typename T1, typename T2> Tuple<T1, T2>& Tuple<T1, T2>::operator=(const Tuple<T1, T2>& other)
+Tuple& Tuple::operator=(const Tuple& other)
 {
     m_key = other.m_key;
     m_val = other.m_val;
     return *this;
 }
 
-template <typename T1, typename T2> Tuple<T1, T2>::~Tuple()
+Tuple::~Tuple()
 {
-    delete m_key;
-    delete m_val;
+    //delete &m_key;
+    //delete &m_val;
 }
